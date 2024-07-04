@@ -1,4 +1,4 @@
-"use client"
+"use client" //변경될 것들이 필요하다면 작성
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
