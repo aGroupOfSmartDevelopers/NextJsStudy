@@ -1,14 +1,23 @@
+"use client"
+
+import { useEffect, useState } from "react";
 import Navigation from "../../components/navigation";
 
-export const metadata = {
-    title: 'Home',
-    description: 'The best movies on the the best framework',
-}
-
 export default function Root(){
+    const [isLoading, setIsLoading] = useState(true);
+    const [movies, setMovies] = useState([]);
+    const getMovies = async()=>{
+        const response = await fetch("https://nomad-movies.nomadcoders.workers.dev/movies")
+        const json = (await response).json();
+        setMovies(await json);
+        setIsLoading(false);
+    }
+    useEffect(()=>{
+        getMovies();
+    }, []);
     return (
         <div>
-            <h1>Hello!</h1>
+            {isLoading ? "Lading..." : JSON.stringify(movies)}
         </div>
     )
 }
