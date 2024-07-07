@@ -1,3 +1,8 @@
+export const metadata = {
+    title: 'About-Us',
+    description: 'The best movies on the the best framework',
+}
+
 export default function RootLayout({
   children,
 }: {

@@ -1,14 +1,14 @@
 import Navigation from "../../components/navigation";
 
 export const metadata = {
-    title: 'About-Us',
+    title: 'Home',
     description: 'The best movies on the the best framework',
 }
 
-export default function AboutUS(){
+export default function Root(){
     return (
         <div>
-            <h1>About us!</h1>
+            <h1>Hello!</h1>
         </div>
     )
 }
