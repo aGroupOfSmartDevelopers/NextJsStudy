@@ -13,10 +13,6 @@ async function getMovies() {
     return json
 }
 
-async function getVideos(id:string) {
-    
-}
-
 export default async function HomePage(){
     const movies = await getMovies();
     return (
